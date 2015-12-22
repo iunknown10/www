@@ -1,5 +1,5 @@
 <?php
-class Controller_Index extends Controller_Layout {
+class Controller_Index extends Controller_Render {
 	
 	public function action_index() {
 		

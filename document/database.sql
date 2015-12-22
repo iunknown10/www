@@ -1,10 +1,23 @@
 -- ----------------------------------------------------------
+-- 邀请码表
+-- Sundj 2015.03.19
+-- ----------------------------------------------------------
+DROP TABLE IF EXISTS `ir_invitation`;
+CREATE TABLE `ir_invitation` (
+	`invitation_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+	`code` char(24) NOT NULL DEFAULT '0' COMMENT '邀请码',
+	`user_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户ID',
+	`create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+	PRIMARY KEY(`invitation_id`)
+)ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=utf8 COMMENT='邀请码表';
+
+-- ----------------------------------------------------------
 -- 用户信息表
 -- Sundj 2015.03.19
 -- ----------------------------------------------------------
 DROP TABLE IF EXISTS `ir_user`;
 CREATE TABLE `ir_user` (
-	`user_id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'iRunning ID',
+	`user_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'iRunning ID',
 	`nickname` char(16) NOT NULL DEFAULT '' COMMENT '昵称',
 	`name` char(16) NOT NULL DEFAULT '' COMMENT '姓名',
 	`email` char(100) NOT NULL DEFAULT '' COMMENT '邮件',
@@ -21,11 +34,13 @@ CREATE TABLE `ir_user` (
 	`id_card_image` varchar(255) NOT NULL DEFAULT '' COMMENT '身份证图片',
 	`job` varchar(100) NOT NULL DEFAULT '' COMMENT '职业',
 	`introducer` int(10) NOT NULL DEFAULT '0' COMMENT '介绍人ID',
+	`is_activated` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否已激活',
 	`create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
 	`update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',
 	PRIMARY KEY(`user_id`),
+	UNIQUE KEY(`email`),
 	UNIQUE KEY(`nickname`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
 -- ----------------------------------------------------------
 -- 用户设备表
