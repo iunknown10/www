@@ -104,6 +104,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
+	'index_file' => FALSE,
 	'errors' => TRUE
 ));
 
@@ -132,6 +133,7 @@ Kohana::modules(array(
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	
 	'database'   => MODPATH.'database',
+	'author'   => MODPATH.'author',
 	'misc' => MODPATH.'misc',
 	));
 
@@ -141,7 +143,18 @@ Cookie::$salt = '#$%^';
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+Route::set('home', 'home(/<controller>(/<action>))')
+	->defaults(array(
+		'directory'	 => 'home',
+		'controller' => 'profile',
+		'action'     => 'index',
+));
 Route::set('default', '(<controller>(/<action>))')
+	->defaults(array(
+		'controller' => 'index',
+		'action'     => 'index',
+	));
+Route::set('article', '(<controller>(/<action>(/<article_id>)))')
 	->defaults(array(
 		'controller' => 'index',
 		'action'     => 'index',

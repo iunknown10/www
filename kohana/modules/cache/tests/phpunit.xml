@@ -7,6 +7,7 @@
 
 	Any options you specify when calling phpunit will override the ones in here
 -->
+<root>
 <php>
 	<includePath>./cache</includePath>
 </php>
@@ -17,3 +18,4 @@
 		</testsuite>
 	</testsuites>
 </phpunit>
+</root>

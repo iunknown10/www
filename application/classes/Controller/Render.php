@@ -20,7 +20,6 @@ class Controller_Render extends Controller {
 	protected $_code = 1;
 	
 	public function before() {
-
 		parent::before();
 		
 		if($this->_autoRender === TRUE) {
@@ -36,7 +35,8 @@ class Controller_Render extends Controller {
 		
 		if($this->_checkLogin) {
 			if(!Author::instance()->isLogin()) {
-				throw new Login_Exception('Not logged in.');
+				//throw new Login_Exception('Not logged in.');
+				Controller::redirect('/login');
 			}
 		}
 		

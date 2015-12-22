@@ -22,4 +22,12 @@ class Misc {
 	static public function isEmail($email) {
 		return preg_match('#.*?\@.*?\..*$#si', $email);
 	}
+	
+	static public function isMobile($mobile) {
+		return preg_match('#^[\d]{11}$#', $mobile);
+	}
+	
+	static public function isQQ($qq) {
+		return preg_match('#^[\d]+$#', $qq);
+	}
 }

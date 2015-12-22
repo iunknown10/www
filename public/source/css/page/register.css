@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+.global-content {
+	padding:30px;
+}
+.register-wrapper {
+	margin:auto;
+	padding:5px;
+	background:#fff;
+}
+.register-form {
+	display:block;
+	color:#b7b7b7;
+	margin:0;
+	text-align:left;
+}
+.register-input-out {
+	width:650px;
+	margin-bottom:5px;
+	color:#5a5a5a;
+}
+.register-input-out label {
+	width:150px;
+	height:35px;;
+	line-height:35px;
+	text-align:right;
+	font-size:15px;
+	font-weight:normal;
+	margin-right:10px;
+}
+.register-input {
+	width:300px;
+	height:35px;
+	line-height:35px;
+	font-size:15px;
+	background:#fff;
+	border:1px solid #d3d3d3;
+	color:#b7b7b7;
+	display:inline;
+}
+.register-input-error {
+	border:1px solid #fc4343;
+}
+.register-input-success {
+	border:1px solid #36a803;
+}
+.register-checkbox {
+	border:1px solid #d3d3d3;
+}
+.register-button {
+	width:240px;
+	height:40px;
+	line-height:40px;
+	font-size:20px;
+	color:#fff;
+	background:#65c1ba;
+	border:none;
+}
+
+.register-subject {
+	margin:auto;
+	padding:15px;
+	background:#fff;
+	font-size:18px;
+}
+.register-blank {
+	margin:auto;
+	padding:0;
+	height:30px;
+	background:#f7f7f7;
+}
+.register-form {
+}
+
+.register-table-left {
+	width:800px;
+	display:block;
+	position:relative;
+}
+.register-table-right {
+	width:400px;
+}
+
+.register-tip {
+	display: none;
+	position:absolute;
+	width:250px;
+	top: 30px;
+	right: 30px;
+	text-align:center;
+}

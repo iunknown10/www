@@ -1,0 +1,216 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2015-10-20 02:29:57 --- EMERGENCY: View_Exception [ 0 ]: The requested view html/index could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 02:29:57 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('html/index')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('html/index', NULL)
+#2 /workspace/irunning.com/www/application/classes/Controller/Index.php(15): Kohana_View::factory('html/index')
+#3 /workspace/irunning.com/www/application/classes/Controller/Render.php(56): Controller_Index->action_page()
+#4 [internal function]: Controller_Render->execute()
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Index))
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#9 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 02:33:39 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:33:39 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:18 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:18 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 02:34:19 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:15 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:15 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:16 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:16 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:16 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:16 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:17 --- EMERGENCY: ErrorException [ 2 ]: Attempt to assign property of non-object ~ APPPATH/classes/Controller/Login.php [ 7 ] in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:07:17 --- DEBUG: #0 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Core::error_handler(2, 'Attempt to assi...', '/workspace/irun...', 7, Array)
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#7 {main} in /workspace/irunning.com/www/application/classes/Controller/Login.php:7
+2015-10-20 03:45:15 --- EMERGENCY: View_Exception [ 0 ]: The requested view layout/header could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 03:45:15 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('layout/header')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('layout/header', NULL)
+#2 /workspace/irunning.com/www/application/views/layout/global.php(1): Kohana_View::factory('layout/header')
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(61): include('/workspace/irun...')
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(348): Kohana_View::capture('/workspace/irun...', Array)
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(228): Kohana_View->render()
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#7 /workspace/irunning.com/www/application/classes/Controller/Login.php(7): Kohana_Response->body(Object(View))
+#8 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Login->action_index()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Login))
+#11 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#14 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 03:45:18 --- EMERGENCY: View_Exception [ 0 ]: The requested view profile/profile could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 03:45:18 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('profile/profile')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('profile/profile', NULL)
+#2 /workspace/irunning.com/www/application/classes/Controller/Profile.php(9): Kohana_View::factory('profile/profile')
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(84): Controller_Profile->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Profile))
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#9 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 03:54:32 --- EMERGENCY: View_Exception [ 0 ]: The requested view global/navigator could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 03:54:32 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('global/navigato...')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('global/navigato...', NULL)
+#2 /workspace/irunning.com/www/application/views/layout/profile.php(11): Kohana_View::factory('global/navigato...')
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(61): include('/workspace/irun...')
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(348): Kohana_View::capture('/workspace/irun...', Array)
+#5 /workspace/irunning.com/www/application/classes/Controller/Layout.php(18): Kohana_View->render()
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Controller.php(87): Controller_Layout->after()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Profile))
+#9 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#12 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 04:36:41 --- EMERGENCY: View_Exception [ 0 ]: The requested view html/index could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 04:36:41 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('html/index')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('html/index', NULL)
+#2 /workspace/irunning.com/www/application/classes/Controller/Index.php(15): Kohana_View::factory('html/index')
+#3 /workspace/irunning.com/www/application/classes/Controller/Render.php(56): Controller_Index->action_page()
+#4 [internal function]: Controller_Render->execute()
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Index))
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#9 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 04:36:44 --- EMERGENCY: View_Exception [ 0 ]: The requested view layout/footer could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 04:36:44 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('layout/footer')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('layout/footer', NULL)
+#2 /workspace/irunning.com/www/application/views/layout/index.php(32): Kohana_View::factory('layout/footer')
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(61): include('/workspace/irun...')
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(348): Kohana_View::capture('/workspace/irun...', Array)
+#5 /workspace/irunning.com/www/application/classes/Controller/Render.php(77): Kohana_View->render()
+#6 /workspace/irunning.com/www/application/classes/Controller/Render.php(59): Controller_Render->after()
+#7 [internal function]: Controller_Render->execute()
+#8 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Index))
+#9 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#12 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 04:36:46 --- EMERGENCY: View_Exception [ 0 ]: The requested view layout/footer could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 04:36:46 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('layout/footer')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('layout/footer', NULL)
+#2 /workspace/irunning.com/www/application/views/layout/index.php(32): Kohana_View::factory('layout/footer')
+#3 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(61): include('/workspace/irun...')
+#4 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(348): Kohana_View::capture('/workspace/irun...', Array)
+#5 /workspace/irunning.com/www/application/classes/Controller/Render.php(77): Kohana_View->render()
+#6 /workspace/irunning.com/www/application/classes/Controller/Render.php(59): Controller_Render->after()
+#7 [internal function]: Controller_Render->execute()
+#8 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Index))
+#9 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#12 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 09:32:02 --- EMERGENCY: View_Exception [ 0 ]: The requested view layout/password could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 09:32:02 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('layout/password')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('layout/password', NULL)
+#2 /workspace/irunning.com/www/application/classes/Controller/Render.php(28): Kohana_View::factory('layout/password')
+#3 /workspace/irunning.com/www/application/classes/Controller/Render.php(35): Controller_Render->before()
+#4 [internal function]: Controller_Render->execute()
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Password))
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#9 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 09:32:04 --- EMERGENCY: View_Exception [ 0 ]: The requested view layout/password could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 09:32:04 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('layout/password')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('layout/password', NULL)
+#2 /workspace/irunning.com/www/application/classes/Controller/Render.php(28): Kohana_View::factory('layout/password')
+#3 /workspace/irunning.com/www/application/classes/Controller/Render.php(35): Controller_Render->before()
+#4 [internal function]: Controller_Render->execute()
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Password))
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#9 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 09:33:04 --- EMERGENCY: View_Exception [ 0 ]: The requested view layout/password could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137
+2015-10-20 09:33:04 --- DEBUG: #0 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(137): Kohana_View->set_filename('layout/password')
+#1 /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php(30): Kohana_View->__construct('layout/password', NULL)
+#2 /workspace/irunning.com/www/application/classes/Controller/Render.php(28): Kohana_View::factory('layout/password')
+#3 /workspace/irunning.com/www/application/classes/Controller/Render.php(35): Controller_Render->before()
+#4 [internal function]: Controller_Render->execute()
+#5 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Password))
+#6 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /workspace/irunning.com/www/kohana/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /workspace/irunning.com/www/public/index.php(47): Kohana_Request->execute()
+#9 {main} in /workspace/irunning.com/www/kohana/system/classes/Kohana/View.php:137

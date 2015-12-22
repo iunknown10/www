@@ -1,22 +1,38 @@
 <?php
 class Controller_Login extends Controller {
 	
-	protected $_layout = 'layout/default';
+	protected $_layout = 'layout/login';
 	
 	public function action_index() {
-		$this->response->body(View::factory($this->_layout)->set('content', View::factory('login/index')));
+		$this->response->body(View::factory($this->_layout)->set('content', View::factory('login/form')));
 	}
 	
 	public function action_land() {
-		$username = Arr::get($_POST, 'username', '');
+		$name = Arr::get($_POST, 'name', '');
 		$password = Arr::get($_POST, 'password', '');
 		
+		$code = 0;
+		$message = 'OK';
+		$data = NULL;
+		
 		try {
-			Lander::instance()->username($username)->password($password)->execute();
+			$landed = Author::instance()->login($name, $password);
+			if($landed) {
+				$code = 1;
+				$data = '/profile';
+			}
+			$message = '登录失败';
 		} catch(Exception $e) {
-			echo $e->getMessage();
-			exit();
+			$code = 0;
+			$message = $e->getMessage();
 		}
-		Controller::redirect('main/guide');
+		
+		$response = array(
+			'code' => $code,
+			'message' => $message,
+			'data' => $data,
+		);
+		echo json_encode($response);
+		exit();
 	}
 }

@@ -34,7 +34,43 @@ abstract class Dao {
 
 		return new $class($db);
 	}
-
+	
+	/**
+	 * Begin Transaction
+	 * @param string $db
+	 * @return Ambigous <object, mixed, number, Database_Result_Cached, multitype:>
+	 */
+	public static function begin($db = NULL) {
+		if($db = NULL) {
+			$db = 'default';
+		}
+		return DB::query(NULL, "BEGIN WORK")->execute($db);
+	}
+	
+	/**
+	 * Commit Transaction
+	 * @param string $db
+	 * @return Ambigous <object, mixed, number, Database_Result_Cached, multitype:>
+	 */
+	public static function commit($db = NULL) {
+		if($db = NULL) {
+			$db = 'default';
+		}
+		return DB::query(NULL, "COMMIT")->execute($db);
+	}
+	
+	/**
+	 * Rollback Transction
+	 * @param string $db
+	 * @return Ambigous <object, mixed, number, Database_Result_Cached, multitype:>
+	 */
+	public static function rollback($db = NULL) {
+		if($db = NULL) {
+			$db = 'default';
+		}
+		return DB::query(NULL, "ROLLBACK")->execute($db);
+	}
+	
 	public function __construct($db = NULL) {
 		if($db) {
 			$this->_db = $db;

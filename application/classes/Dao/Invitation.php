@@ -11,7 +11,8 @@ class Dao_Invitation extends Dao {
 		return DB::select('*')
 			->from($this->_tableName)
 			->where('code', '=', $code)
-			->as_object('Mode_Invitation')
-			->execute($this->_db);
+			->as_object('Model_Invitation')
+			->execute($this->_db)
+			->current();
 	}
 }
