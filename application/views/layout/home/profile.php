@@ -10,6 +10,7 @@
 <link href="/source/css/page/global.css" rel="stylesheet"/>
 <link href="/source/css/page/profile.css" rel="stylesheet"/>
 <script type="text/javascript" src="/source/scripts/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/source/fancybox/jquery.fancybox.js" /></script>
 <script type="text/javascript" src="/source/scripts/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="/source/scripts/misc/pnotify.custom.js"></script>
 <script type="text/javascript" src="/source/scripts/misc/sweetalert.min.js"></script>

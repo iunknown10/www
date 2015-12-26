@@ -8,7 +8,6 @@
 <link href="/source/css/misc/pnotify.custom.css" rel="stylesheet"/>
 <link href="/source/css/misc/sweetalert.css" rel="stylesheet"/>
 <link href="/source/css/page/global.css" rel="stylesheet"/>
-<link href="/source/css/page/index.css" rel="stylesheet"/>
 <script type="text/javascript" src="/source/scripts/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="/source/scripts/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="/source/scripts/misc/pnotify.custom.js"></script>

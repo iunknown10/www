@@ -4,8 +4,8 @@
 		<div class="global-navigator">
 			<ul>
 				<li class="active"><a href="/">首页</a></li>
-				<li><a href="<?php echo URL::site('articles'); ?>">分享</a></li>
-				<li><a href="<?php echo URL::site('routes'); ?>">路线</a></li>
+				<li><a href="<?php echo URL::site('article'); ?>">分享</a></li>
+				<li><a href="<?php echo URL::site('route'); ?>">路线</a></li>
 			</ul>
 		</div>
 		<div class="gloal-top-landing">

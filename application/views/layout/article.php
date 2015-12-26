@@ -7,7 +7,6 @@
 <link href="/source/css/bootstrap/bootstrap-theme.css" rel="stylesheet">
 <link href="/source/css/misc/sweetalert.css" rel="stylesheet"/>
 <link href="/source/css/page/global.css" rel="stylesheet"/>
-<link href="/source/css/page/index.css" rel="stylesheet"/>
 <link href="/source/css/page/article.css" rel="stylesheet"/>
 <script type="text/javascript" src="/source/scripts/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="/source/scripts/bootstrap/bootstrap.js"></script>

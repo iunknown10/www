@@ -1,4 +1,3 @@
-
 <form id="iform" name="iform" class="login-form" action="<?php echo URL::site('/login/land'); ?>" method="post">
 	<div class="login-input-out">
 		<input type="text" id="name" name="name" value="用户名／邮箱／手机" class="login-input" />
@@ -15,6 +14,7 @@
 	<div class="login-input-out text-center"><a href="/password/forgot">忘记密码？</a></div>
 </form>
 
+<script type="text/javascript" src="/source/scripts/controller/login.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	Login.bindEvent();

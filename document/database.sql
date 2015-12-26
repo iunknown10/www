@@ -181,9 +181,11 @@ DROP TABLE IF EXISTS `ir_photo`;
 CREATE TABLE `ir_photo` (
 	`photo_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '照片ID',
 	`title` char(32) NOT NULL DEFAULT '' COMMENT '标题',
+	`memo` varchar(255) NOT NULL DEFAULT '' COMMENT '说明',
 	`user_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户ID',
 	`path` text NOT NULL DEFAULT '' COMMENT '存储路径',
-	`mime` varchar(255) NOT NULL DEFAULT '' COMMENT '图片类型',
+	`mime` char(128) NOT NULL DEFAULT '' COMMENT '图片类型',
+	`size` bigint(20) NOT NULL DEFAULT '0' COMMENT '字节数',
 	`status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '状态 -1删除 0正常',
 	`create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
 	`update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '修改时间',

@@ -1,7 +1,9 @@
 <?php
 class Controller_Home_Route extends Controller_Render {
 	
-	
+	public function action_share() {
+		
+	}
 	
 	public function action_run() {
 		$this->_autoRender = FALSE;

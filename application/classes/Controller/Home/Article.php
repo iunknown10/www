@@ -52,7 +52,7 @@ class Controller_Home_Article extends Controller_Render {
 	}
 	
 	public function action_list() {
-		$number = 1;
+		$number = 15;
 		$page = Arr::get($_GET, 'page', 1);
 		$total = Dao::factory('Article')->countByUserId(Author::userId());
 

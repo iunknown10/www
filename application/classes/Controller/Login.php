@@ -19,7 +19,7 @@ class Controller_Login extends Controller {
 			$landed = Author::instance()->login($name, $password);
 			if($landed) {
 				$code = 1;
-				$data = '/profile';
+				$data = '/home/profile';
 			}
 			$message = '登录失败';
 		} catch(Exception $e) {

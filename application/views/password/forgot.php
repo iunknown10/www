@@ -7,3 +7,9 @@
 		<input type="submit" value=" 下一步 " class="password-button" />
 	</div>
 </form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	Password.bindEvent();
+});
+</script>

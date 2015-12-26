@@ -3,6 +3,14 @@ class Controller_Article extends Controller_Render {
 	
 	protected $_layout = 'layout/article';
 	
+	public function action_index() {
+		return $this->action_list();
+	}
+	
+	public function action_list() {
+		
+	}
+	
 	public function action_view() {
 		$articleId = Arr::get($_GET, 'article_id', 0);
 		if(!$articleId) {

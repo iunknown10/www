@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+.global-content {
+	padding:30px;
+}
+.photo-wrapper {
+	margin:auto;
+	padding:10px;
+	background:#fff;
+	min-height:400px;
+}
+.photo-upload-wrapper {
+	width:240px;
+	height:40px;
+	display:block;
+	margin:auto;
+}
+.photo-button {
+	width:240px;
+	height:40px;
+	line-height:40px;
+	font-size:20px;
+	color:#fff;
+	background:#65c1ba;
+	border:none;
+	display:block;
+	margin:auto;
+}
+.photo-input-file {
+	width:240px;
+	height:40px;
+	background:#65c1ba;
+	border:none;
+	position:absolute;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity:0;
+	opacity:0;
+}
+.photo-input-title {
+	width:350px;
+	height:40px;
+}
+.photo-textarea-memo {
+	width:350px;
+	height:60px;
+}
+.photo-upload-wrapper  a:hover {
+	text-decoration:none;
+	background:#61d4cc;
+	color:#fff;
+}
+#Thumbnail {
+	min-height:200px;
+}
