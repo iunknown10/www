@@ -51,11 +51,11 @@ class Controller_Home_Profile extends Controller_Render {
 			$errors['qq'] = 'QQ号必须是数字';
 		}
 		
-		$users = Dao::factory('user')->getUsersByEmail($raw['email'], array(Author::userId()));
+		$users = Dao::factory('User')->getUsersByEmail($raw['email'], array(Author::userId()));
 		if($users->count()) {
 			$errors['email'] = '邮箱已被使用';
 		}
-		$users = Dao::factory('user')->getUsersByMobile($raw['mobile'], array(Author::userId()));
+		$users = Dao::factory('User')->getUsersByMobile($raw['mobile'], array(Author::userId()));
 		if($users->count()) {
 			$errors['mobile'] = '手机号已被使用';
 		}
@@ -69,7 +69,7 @@ class Controller_Home_Profile extends Controller_Render {
 		$raw['birth_month'] = $IDCard[10].$IDCard[11];
 		$raw['birth_day'] = $IDCard[12].$IDCard[13];
 		
-		$result = Dao::factory('user')->update(Author::userId(), $raw);
+		$result = Dao::factory('User')->update(Author::userId(), $raw);
 		if(!$result) {
 			return $this->failed('更新失败');
 		}
@@ -89,13 +89,13 @@ class Controller_Home_Profile extends Controller_Render {
 		$result = FALSE;
 		$users = NULL;
 		if($email) {
-			$users = Dao::factory('user')->getUsersByEmail($email, array(Author::userId()));
+			$users = Dao::factory('User')->getUsersByEmail($email, array(Author::userId()));
 			if($users->count() > 0) {
 				$result = TRUE;
 			}
 		}
 		if($mobile) {
-			$users = Dao::factory('user')->getUsersByMobile($mobile, array(Author::userId()));
+			$users = Dao::factory('User')->getUsersByMobile($mobile, array(Author::userId()));
 			if($users->count() > 0) {
 				$result = TRUE;
 			}
