@@ -192,7 +192,7 @@ var Profile = {
 		
 		$.ajax({
 			type : 'post',
-			url : '/profile/save',
+			url : '/home/profile/save',
 			data : values,
 			async : false,
 			success : function(response) {

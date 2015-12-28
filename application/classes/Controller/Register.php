@@ -6,7 +6,8 @@ class Controller_Register extends Controller_Render {
 	public function action_index() {
 		$code = Arr::get($_GET, 'code', NULL);
 		
-		$user = Dao::factory('user')->getUserByUserId(1029);
+		$userId = Author::userId();
+		$user = Dao::factory('User')->getUserByUserId($userId);
 		
 		$invitation = Dao::factory('Invitation')->getInvitationByCode($code);
 		if(!$invitation instanceof Model_Invitation) {

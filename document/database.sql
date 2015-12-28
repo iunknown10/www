@@ -195,6 +195,12 @@ CREATE TABLE `ir_photo` (
 
 
 
+-- ----------------------------------------------------------
+-- root
+-- Sundj 2015.12.28
+-- ----------------------------------------------------------
+INSERT INTO ir_user (`user_id`, `nickname`, `name`, `email`, `password`, `is_activated`, `salt`)  values ('1024', 'Sundj', '孙东杰', 'Sundj@live.com', 'f6d228b9d1d97d52e931976239b88431', '1', '&^2c!a');
+
 
 
 

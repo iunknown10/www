@@ -15,9 +15,9 @@ class Dao_User extends Dao {
 		$values = array_values($raw);
 	
 		return DB::insert($this->_tableName)
-		->columns($columns)
-		->values($values)
-		->execute($this->_db);
+			->columns($columns)
+			->values($values)
+			->execute($this->_db);
 	}
 
 	public function update($userId = 0, array $raw = array()) {
