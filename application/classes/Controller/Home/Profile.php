@@ -64,10 +64,12 @@ class Controller_Home_Profile extends Controller_Render {
 			return $this->failed('数据有误');
 		}
 		
-		$IDCard = $raw['id_card'];
-		$raw['birth_year'] = $IDCard[6].$IDCard[7].$IDCard[8].$IDCard[9];
-		$raw['birth_month'] = $IDCard[10].$IDCard[11];
-		$raw['birth_day'] = $IDCard[12].$IDCard[13];
+		if(isset($raw['id_card'])) {
+			$IDCard = $raw['id_card'];
+			$raw['birth_year'] = $IDCard[6].$IDCard[7].$IDCard[8].$IDCard[9];
+			$raw['birth_month'] = $IDCard[10].$IDCard[11];
+			$raw['birth_day'] = $IDCard[12].$IDCard[13];
+		}
 		
 		$result = Dao::factory('User')->update(Author::userId(), $raw);
 		if(!$result) {
