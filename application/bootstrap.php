@@ -22,7 +22,7 @@ else
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('Aisa/Shanghai');
 
 /**
  * Set the default locale.
@@ -30,7 +30,7 @@ date_default_timezone_set('America/Chicago');
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/function.setlocale
  */
-setlocale(LC_ALL, 'en_US.utf-8');
+setlocale(LC_ALL, 'zh_CN.utf-8');
 
 /**
  * Enable the Kohana auto-loader.
@@ -87,6 +87,10 @@ if (isset($_SERVER['KOHANA_ENV']))
 	Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
 }
 
+if (!isset($_SERVER['ENVIRONMENT'])) {
+	$_SERVER['ENVIRONMENT'] = 'DEVELOPMENT';
+}
+
 /**
  * Initialize Kohana, setting the default options.
  *
@@ -116,7 +120,8 @@ Kohana::$log->attach(new Log_File(APPPATH.'logs'));
 /**
  * Attach a file reader to config. Multiple readers are supported.
  */
-Kohana::$config->attach(new Config_File);
+//Kohana::$config->attach(new Config_File);
+Kohana::$config->attach(new Config_File('config/'.strtolower($_SERVER['ENVIRONMENT'])));
 
 /**
  * Enable modules. Modules are referenced by a relative or absolute path.

@@ -45,7 +45,7 @@ class Controller_Home_Article extends Controller_Render {
 			return $this->failed('保存失败');
 		}
 		$this->_data = array(
-			'redirect' => '/home/article/all',
+			'redirect' => '/home/article/list',
 			'article_id' => $articleId
 		);
 		return $this->success('保存成功');

@@ -36,7 +36,7 @@ var Article = {
 		
 		$.ajax({
 			type : 'post',
-			url : '/article/save',
+			url : '/home/article/save',
 			data : values,
 			async : false,
 			success : function(response) {
@@ -91,7 +91,7 @@ var Article = {
 			function(){
 				$.ajax({
 					type : 'post',
-					url : '/article/delete',
+					url : '/home/article/delete',
 					data : 'article_id='+ articleId,
 					async : false,
 					success : function(response) {
