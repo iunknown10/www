@@ -59,13 +59,13 @@ class Controller_Register extends Controller_Render {
 		}
 		
 		$email = $raw['email'];
-		$users = Dao::factory('user')->getUsersByEmail($email);
+		$users = Dao::factory('User')->getUsersByEmail($email);
 		if($users->count()) {
 			$errors['email'] = '邮箱已存在';
 		}
 		
 		$nickname = $raw['nickname'];
-		$users = Dao::factory('user')->getUsersByNickname($nickname);
+		$users = Dao::factory('User')->getUsersByNickname($nickname);
 		if($users->count()) {
 			$errors['nickname'] = '昵称已被使用';
 		}
@@ -84,7 +84,7 @@ class Controller_Register extends Controller_Render {
 		$raw['password'] = md5($raw['password'].$salt);
 		$raw['salt'] = $salt;
 		
-		$result = Dao::factory('user')->insert($raw);
+		$result = Dao::factory('User')->insert($raw);
 		if(!$result) {
 			return $this->failed('注册失败');
 		}
@@ -108,19 +108,19 @@ class Controller_Register extends Controller_Render {
 		$result = FALSE;
 		$users = NULL;
 		if($nickname) {
-			$users = Dao::factory('user')->getUsersByNickname($nickname);
+			$users = Dao::factory('User')->getUsersByNickname($nickname);
 			if($users->count() > 0) {
 				$result = TRUE;
 			}
 		}
 		if($email) {
-			$users = Dao::factory('user')->getUsersByEmail($email);
+			$users = Dao::factory('User')->getUsersByEmail($email);
 			if($users->count() > 0) {
 				$result = TRUE;
 			}
 		}
 		if($mobile) {
-			$users = Dao::factory('user')->getUsersByMobile($mobile);
+			$users = Dao::factory('User')->getUsersByMobile($mobile);
 			if($users->count() > 0) {
 				$result = TRUE;
 			}
