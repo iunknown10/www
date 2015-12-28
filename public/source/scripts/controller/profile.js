@@ -130,7 +130,7 @@ var Profile = {
 		var pass = false;
 		$.ajax({
 			type : 'post',
-			url : '/profile/verify',
+			url : '/home/profile/verify',
 			data : field +'='+ value,
 			async : false,
 			success : function(response) {
