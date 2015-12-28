@@ -24,6 +24,9 @@ var Chaos = {
 				console.log(errorThrown);
 			}
 		});
-	}
+	},
+	
+	foo : function() {
 		
+	}
 };
