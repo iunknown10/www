@@ -225,7 +225,7 @@ var Register = {
 					closeOnConfirm: true
 				},
 				function() {
-					setTimeout(function(){location.href = '/profile';}, 100);
+					setTimeout(function(){location.href = '/home/profile';}, 100);
 				});
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown) {
