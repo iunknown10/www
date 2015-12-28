@@ -7,7 +7,7 @@ return array
 		'connection' => array(
 			'dsn'        => 'mysql:host=127.0.0.1;dbname=irunning',
 			'username'   => 'irunning',
-			'password'   => 'irunning2014-2015',
+			'password'   => 'irunning.2014-2015',
 			'persistent' => FALSE,
 		),
 		/**
