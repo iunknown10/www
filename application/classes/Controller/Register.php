@@ -47,7 +47,7 @@ class Controller_Register extends Controller_Render {
 		if(!$raw['password']) {
 			$errors['password'] = '密码不能为空';
 		}
-		$invitation = Dao::factory('invitation')->getInvitationByCode($code);
+		$invitation = Dao::factory('Invitation')->getInvitationByCode($code);
 		if(!$invitation) {
 			return $this->failed('对不起，邀请码无效！');
 		}
