@@ -250,9 +250,9 @@ body {
 }
 .navigator-top-slogan {
 	font-family:"Microsoft Yahei", "Simsun";
-	font-weight:700;
-	color:#fff;
-	margin:auto;
+	font-weight:normal;
+	color:#000;
+	left:160px;
 	padding:0;
 	position:relative;
 	width:500px;
@@ -342,5 +342,4 @@ body {
 .pagination > li > a {
 	display:block;
 }
-
 
