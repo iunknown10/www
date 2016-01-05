@@ -15,7 +15,7 @@
 				<td><input type="checkbox" name="article_id[]" value="<?php echo $article->getArticleId(); ?>" /></td>
 				<td><a href="<?php echo URL::site('article/view/'.$article->getArticleId()); ?>" target="_blank"><?php echo $article->getTitle(); ?></a></td>
 				<td><?php echo $article->getCreateTime('Y.m.d'); ?></td>
-				<td><a href="<?php echo URL::site('article/edit/'.$article->getArticleId()); ?>"><span class="glyphicon glyphicon-edit"></span>修改</a> <a href="#" onclick="Article.remove(<?php echo $article->getArticleId(); ?>);"><span class="glyphicon glyphicon-remove"></span>删除</a></td>
+				<td><a href="<?php echo URL::site('home/article/edit?article_id='.$article->getArticleId()); ?>"><span class="glyphicon glyphicon-edit"></span>修改</a> <a href="#" onclick="Article.remove(<?php echo $article->getArticleId(); ?>);"><span class="glyphicon glyphicon-remove"></span>删除</a></td>
 			</tr>
 	<?php
 		}

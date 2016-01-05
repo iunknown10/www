@@ -17,14 +17,15 @@ tinymce.init({
 <div class="article-wrapper">
 	<div class="article-form">
 		<form action="<?php echo URL::site('article/save'); ?>" method="post" id="form" name="form">
+		<input type="hidden" id="article_id" name="article_id" value="<?php echo isset($article) ? $article->getArticleId() : ''; ?>" />
 		<table class="article-form-table">
 			<tr>
 				<td><div class="article-form-label">标题</div></td>
-				<td><input class="article-form-input" type="text" id="title" name="title" value="" /></td>
+				<td><input class="article-form-input" type="text" id="title" name="title" value="<?php echo isset($article) ? $article->getTitle() : ''; ?>" /></td>
 			</tr>
 			<tr>
 				<td><div class="article-form-label">内容</div></td>
-				<td><textarea id="content" name="content"></textarea></td>
+				<td><textarea id="content" name="content"><?php echo isset($article) ? $article->getContent() : ''; ?></textarea></td>
 			</tr>
 			<tr>
 				<td></td>
