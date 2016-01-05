@@ -23,7 +23,8 @@ var Photo = {
 			try {
 				var uploader = new Uploader()
 					.uploadURL('/home/photo/accept')
-					.progressNode(nodeSpan)
+					.progressNode(nodeSpan.get(0))
+					.progressBarShow(true)
 					.file(file)
 					.identifier(increment)
 					.oncomplete('Photo.uploadComplete')

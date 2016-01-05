@@ -2,13 +2,15 @@
 tinymce.init({
 	  selector: 'textarea',
 	  language: 'zh_CN',
-	  height: 400,
+	  height: 500,
+	  file_picker_callback: function(){},
+	  convert_urls: false,
 	  plugins: [
-	    'advlist autolink lists link image charmap print preview anchor',
+	    'advlist autolink lists link imageplus imagetools charmap print preview anchor',
 	    'searchreplace visualblocks code fullscreen',
 	    'insertdatetime media table contextmenu paste code'
 	  ],
-	  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+	  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link imageplus'
 	});
 </script>
 

@@ -14,6 +14,8 @@
 <script type="text/javascript" src="/source/scripts/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="/source/scripts/misc/sweetalert.min.js"></script>
 <script type="text/javascript" src="/source/scripts/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="/source/scripts/misc/md5.js"></script>
+<script type="text/javascript" src="/source/scripts/misc/uploader.js"></script>
 <script type="text/javascript" src="/source/scripts/controller/article.js"></script>
 <script type="text/javascript" src="/source/scripts/controller/chaos.js"></script>
 </head>

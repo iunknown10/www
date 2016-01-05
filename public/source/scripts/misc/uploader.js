@@ -22,6 +22,10 @@ function Uploader() {
 		
 		progressNode : null,
 		
+		progressBarShow : false,
+		
+		progressTextShow : false,
+		
 		onloadstart : false,
 		
 		onload : false,
@@ -70,6 +74,16 @@ function Uploader() {
 		return this;
 	}
 	
+	this.progressTextShow = function() {
+		this.options.progressTextShow = arguments[0];
+		return this;
+	}
+	
+	this.progressBarShow = function() {
+		this.options.progressBarShow = arguments[0];
+		return this;
+	}
+
 	this.onloadstart = function() {
 		this.options.onloadstart = arguments[0];
 		return this;
@@ -126,8 +140,13 @@ Uploader.prototype.progress = function(byteLength) {
 	var progress = (this.position + byteLength) / this.options.file.size * 100;
 	progress = progress > 100 ? 100 : progress;
 	
-	this.options.progressNode.attr('aria-valuenow', progress.toFixed(2)).css('width', progress.toFixed(2) +'%');
-	this.options.progressNode.html(progress.toFixed(2) +'%');
+	var progressNode = $(this.options.progressNode);
+	if(this.options.progressBarShow) {
+		progressNode.attr('aria-valuenow', progress.toFixed(2)).css('width', progress.toFixed(2) +'%');	
+	}
+	if(this.options.progressTextShow) {
+		progressNode.html(progress.toFixed(2) +'%');
+	}
 };
 
 /**

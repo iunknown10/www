@@ -33,6 +33,7 @@ class Controller_Home_Photo extends Controller_Render {
 		
 		$pathinfo = pathinfo($data['name']);
 		$extension = $pathinfo['extension'];
+		$extension = strtolower($extension);
 		
 		$identifier = $data['identifier'];
 		$name = $data['name'];
