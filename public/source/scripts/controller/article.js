@@ -9,6 +9,9 @@ var Article = {
 	},
 	
 	submit : function(element) {
+		
+		tinyMCE.triggerSave();
+		
 		var action = element.form.action;
 		var values = $(element.form).serialize();
 		
