@@ -13,7 +13,7 @@
 <script type="text/javascript" src="/source/scripts/bootstrap/bootstrap.js"></script>
 </head>
 <body>
-<?php echo View::factory('global/navigator/wide'); ?>
+<?php echo View::factory('global/navigator'); ?>
 <div class="global-content">
 	<div class="global-wrapper">
 		<h1 class="text-center"><small>您发现了一个不存在的页面！</small></h1>
