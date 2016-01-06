@@ -84,7 +84,7 @@ class Controller_Home_Photo extends Controller_Render {
 	}
 	
 	public function action_list() {
-		$number = 15;
+		$number = 16;
 		$userId = Author::userId();
 		
 		$page = Arr::get($_GET, 'page', 1);
@@ -109,10 +109,17 @@ class Controller_Home_Photo extends Controller_Render {
 		$photoId = Arr::get($_POST, 'photo_id', 0);
 		$userId = Author::userId();
 		
+		$photo = Dao::factory('Photo')->getPhotoByPhotoId($photoId);
+		if(!$photo) {
+			return $this->success('删除成功');
+		}
+		
 		$result = Dao::factory('Photo')->delete($photoId, $userId);
 		if(!$result) {
 			return $this->failed('删除失败');
 		}
+		
+		@unlink('/attachments'. $photo->getPath());
 		return $this->success('删除成功');
 	}
 	

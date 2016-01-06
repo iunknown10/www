@@ -80,8 +80,8 @@ var Photo = {
 						});
 						return;
 					}
-					var h3 = $('<h3 ondblclick="Photo.updateTitle(this);" data-id="'+ photoId +'" data-title="'+ title +'" data-time="'+ createTime +'">'+ title +' <small>'+ createTime +'</small></h3>');
-					input.replaceWith(h3);
+					var h5 = $('<h5 ondblclick="Photo.updateTitle(this);" data-id="'+ photoId +'" data-title="'+ title +'" data-time="'+ createTime +'">'+ title +' <small>'+ createTime +'</small></h5>');
+					input.replaceWith(h5);
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
 					swal({
@@ -113,6 +113,50 @@ var Photo = {
 		var textarea = $('<textarea date-id="'+ photoId +'" class="photo-textarea-memo">'+ memo +'</textarea>');
 		$(element).replaceWith(textarea);
 		
+	},
+	
+	remove : function(photoId) {
+		swal({
+				title: '确定删除这个照片吗？',
+				text: '删除之后不可恢复!',
+				type: 'warning',
+				showCancelButton: true,
+				cancelButtonText: '取消',
+				confirmButtonColor: '#DD6B55',
+				confirmButtonText: '删除',
+				closeOnConfirm: true
+			},
+			function(){
+				$.ajax({
+					type : 'post',
+					url : '/home/photo/delete',
+					data : 'photo_id='+ photoId,
+					async : false,
+					success : function(response) {
+						response = eval(response);
+						if(!response.code) {
+							swal({
+								title: '<small>有点错误……</small>',
+								type: 'error',
+								text: response.message,
+								html: true,
+								timer: 3000
+							});
+							return;
+						}
+						$('#Photo-'+ photoId).remove();
+					},
+					error : function(XMLHttpRequest, textStatus, errorThrown) {
+						swal({
+							title: '<small>操作失败，服务器出故障了!</small>',
+							text: 'Error: <span style="color:#F8BB86;">'+ errorThrown +'</span>',
+							html: true,
+							timer: 3000
+						});
+					}
+				});
+			});
 	}
+	
 };
 

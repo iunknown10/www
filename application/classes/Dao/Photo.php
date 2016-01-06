@@ -16,10 +16,21 @@ class Dao_Photo extends Dao {
 			->get('number');
 	}
 	
+	public function getPhotoByPhotoId($photoId) {
+		return DB::select('*')
+			->from($this->_tableName)
+			->where('photo_id', '=', $photoId)
+			->where('status', '!=', -1)
+			->as_object('Model_Photo')
+			->execute($this->_db)
+			->current();
+	}
+	
 	public function getPhotosByUserId($userId, $number = 0, $offset = 0) {
 		$select = DB::select('*')
 			->from($this->_tableName)
 			->where('user_id', '=', $userId)
+			->where('status', '!=', -1)
 			->order_by('photo_id', 'DESC');
 		if($number) {
 			$select->limit($number);
@@ -32,9 +43,10 @@ class Dao_Photo extends Dao {
 	}
 	
 	public function delete($photoId, $userId) {
-		return DB::delete($this->_tableName)
+		return DB::update($this->_tableName)
 			->where('user_id', '=', $userId)
 			->where('photo_id', '=', $photoId)
+			->set(array('status' => -1))
 			->execute($this->_db);
 	}
 	
