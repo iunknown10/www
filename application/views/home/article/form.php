@@ -17,7 +17,7 @@ tinymce.init({
 
 <div class="article-wrapper">
 	<div class="article-form">
-		<form action="<?php echo URL::site('article/save'); ?>" method="post" id="form" name="form">
+		<form id="form" name="form">
 		<input type="hidden" id="article_id" name="article_id" value="<?php echo isset($article) ? $article->getArticleId() : ''; ?>" />
 		<table class="article-form-table">
 			<tr>
