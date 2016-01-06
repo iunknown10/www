@@ -4,9 +4,10 @@ tinymce.init({
 	  language: 'zh_CN',
 	  height: 500,
 	  file_picker_callback: function(){},
+	  image_auto_resize_width: 450,
 	  convert_urls: false,
 	  plugins: [
-	    'advlist autolink lists link imageplus imagetools charmap print preview anchor',
+	    'advlist autolink lists link imageplus charmap print preview anchor',
 	    'searchreplace visualblocks code fullscreen',
 	    'insertdatetime media table contextmenu paste code'
 	  ],
