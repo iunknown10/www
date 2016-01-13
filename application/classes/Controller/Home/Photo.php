@@ -83,8 +83,8 @@ class Controller_Home_Photo extends Controller_Render {
 		
 		if($width >= $height) {
 			if($width >= $sideLength) {
-				$width = $sideLength;
 				$height = floor($sideLength * $height / $width );
+				$width = $sideLength;
 			}
 		}
 		
