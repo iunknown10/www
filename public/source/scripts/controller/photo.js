@@ -43,7 +43,7 @@ var Photo = {
 	uploadComplete : function() {
 		var response = arguments[0];
 		var identifier = response.data.identifier;
-		var source = '/'+response.data.directory+response.data.path;
+		var source = '/'+response.data.directory+response.data.small;
 		
 		$('#thumbnail-'+identifier).attr('src', source);
 		$('#thumbnail-'+identifier).next().remove();

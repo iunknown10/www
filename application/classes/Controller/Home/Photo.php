@@ -86,12 +86,8 @@ class Controller_Home_Photo extends Controller_Render {
 				$width = $sideLength;
 				$height = floor($sideLength / $width * $height);
 			}
-		} else {
-			if($height >= $sideLength) {
-				$width = floor($sideLength * $width / $height);
-				$height = $sideLength;
-			}
 		}
+		
 		$image->scaleimage($width, $height);
 		$image->writeimage($filePath.'.small.'.$extension);
 		
