@@ -17,7 +17,7 @@ tinymce.init({
 
 <div class="article-wrapper">
 	<div class="article-form">
-		<form id="form" name="form">
+		<form id="form" name="form" method="post" onsubmit="return Article.submit(this);">
 		<input type="hidden" id="article_id" name="article_id" value="<?php echo isset($article) ? $article->getArticleId() : ''; ?>" />
 		<table class="article-form-table">
 			<tr>
@@ -30,7 +30,7 @@ tinymce.init({
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="button" class="article-button" value=" 保存日志 " onclick="Article.submit(this);" /></td>			
+				<td><input type="button" class="article-button" value=" 保存日志 " onclick="Article.submit(this.form);" /></td>			
 			</tr>
 		</table>
 		</form>

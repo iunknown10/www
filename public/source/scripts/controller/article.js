@@ -8,12 +8,12 @@ var Article = {
 		$('#'+elementSelect).val(value);
 	},
 	
-	submit : function(element) {
+	submit : function(formElement) {
 		
 		tinyMCE.triggerSave();
 		
-		var action = element.form.action;
-		var values = $(element.form).serialize();
+		var action = formElement.action;
+		var values = $(formElement).serialize();
 		
 		var title = $('#title').val();
 		

@@ -74,11 +74,33 @@ class Controller_Home_Photo extends Controller_Render {
 			return $this->failed('数据操作失败');
 		}
 		
+		//缩略图
+		$sideLength = Kohana::$config->load('photo.side_length');
+		
+		$image = new Imagick($newFilePath);
+		$width = $image->getimagewidth();
+		$height = $image->getimageheight();
+		
+		if($width >= $height) {
+			if($width >= $sideLength) {
+				$width = $sideLength;
+				$height = floor($sideLength / $width * $height);
+			}
+		} else {
+			if($height >= $sideLength) {
+				$height = $sideLength;
+				$width = floor($sideLength * $width / $height);
+			}
+		}
+		$image->scaleimage($width, $height);
+		$image->writeimage($filePath.'.small.'.$extension);
+		
 		$this->_data = array(
 			'identifier' => $identifier,
 			'photo_id' => $photoId,
 			'directory' => 'attachments',
-			'path' => $path
+			'path' => $path,
+			'small' => str_replace($extension, 'small.'.$extension, $path)
 		);
 		return $this->success('上传成功');
 	}
