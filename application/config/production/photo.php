@@ -1,4 +1,4 @@
 <?php
 return array(
-	'side' => 265
+	'side_length' => 265
 );

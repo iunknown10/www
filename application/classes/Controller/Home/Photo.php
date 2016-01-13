@@ -88,8 +88,8 @@ class Controller_Home_Photo extends Controller_Render {
 			}
 		} else {
 			if($height >= $sideLength) {
-				$height = $sideLength;
 				$width = floor($sideLength * $width / $height);
+				$height = $sideLength;
 			}
 		}
 		$image->scaleimage($width, $height);
