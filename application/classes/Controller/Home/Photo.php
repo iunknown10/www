@@ -84,11 +84,9 @@ class Controller_Home_Photo extends Controller_Render {
 		$height = $image->getimageheight();
 		
 		function calculate($w, $h, $length) {
-			if($w >= $h) {
-				if($w >= $length) {
-					$h = floor($length * $h / $w );
-					$w = $length;
-				}
+			if($w >= $length) {
+				$h = floor($length * $h / $w );
+				$w = $length;
 			}
 			return array(
 				'width' => $w,
