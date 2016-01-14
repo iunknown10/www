@@ -75,6 +75,17 @@ class Controller_Home_Photo extends Controller_Render {
 		}
 		
 		//缩略图
+		function calculate($w, $h, $length) {
+			if($w >= $length) {
+				$h = floor($length * $h / $w );
+				$w = $length;
+			}
+			return array(
+					'width' => $w,
+					'height' => $h
+			);
+		}
+		
 		$tiny = Kohana::$config->load('photo.size.tiny');
 		$small = Kohana::$config->load('photo.size.small');
 		$large = Kohana::$config->load('photo.size.large');
@@ -83,29 +94,22 @@ class Controller_Home_Photo extends Controller_Render {
 		$width = $image->getimagewidth();
 		$height = $image->getimageheight();
 		
-		function calculate($w, $h, $length) {
-			if($w >= $length) {
-				$h = floor($length * $h / $w );
-				$w = $length;
-			}
-			return array(
-				'width' => $w,
-				'height' => $h
-			);
-		}
-		
 		$size = calculate($width, $height, $tiny);
 		$image->scaleimage($size['width'], $size['height']);
 		$image->writeimage($filePath.'.tiny.'.$extension);
+		unset($image);
 		
+		$image = new Imagick($newFilePath);
 		$size = calculate($width, $height, $small);
 		$image->scaleimage($size['width'], $size['height']);
 		$image->writeimage($filePath.'.small.'.$extension);
+		unset($image);
 		
+		$image = new Imagick($newFilePath);
 		$size = calculate($width, $height, $large);
 		$image->scaleimage($size['width'], $size['height']);
 		$image->writeimage($filePath.'.large.'.$extension);
-		
+		unset($image);
 		
 		$this->_data = array(
 			'identifier' => $identifier,
