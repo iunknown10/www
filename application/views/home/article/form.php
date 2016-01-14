@@ -1,6 +1,6 @@
 <?php
-$sideLength = Kohana::$config->load('photo.side_length');
-$sideLength = $sideLength ? $sideLength : 500;
+$size = Kohana::$config->load('photo.size.large');
+$size = $size ? $size : 500;
 ?>
 <script type="text/javascript">
 tinymce.init({
@@ -8,7 +8,7 @@ tinymce.init({
 	  language: 'zh_CN',
 	  height: 500,
 	  file_picker_callback: function(){},
-	  image_auto_resize_width: <?php echo $sideLength; ?>,
+	  image_auto_resize_width: <?php echo $size; ?>,
 	  convert_urls: false,
 	  plugins: [
 	    'advlist autolink lists link imageplus charmap print preview anchor',

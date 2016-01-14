@@ -1,4 +1,8 @@
 <?php
 return array(
-	'side_length' => 265
+	'size' => array(
+		'tiny' => 120,
+		'small' => 260,
+		'large' => 500, 
+	)
 );

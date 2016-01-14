@@ -75,28 +75,48 @@ class Controller_Home_Photo extends Controller_Render {
 		}
 		
 		//缩略图
-		$sideLength = Kohana::$config->load('photo.side_length');
+		$tiny = Kohana::$config->load('photo.size.tiny');
+		$small = Kohana::$config->load('photo.size.small');
+		$large = Kohana::$config->load('photo.size.large');
 		
 		$image = new Imagick($newFilePath);
 		$width = $image->getimagewidth();
 		$height = $image->getimageheight();
 		
-		if($width >= $height) {
-			if($width >= $sideLength) {
-				$height = floor($sideLength * $height / $width );
-				$width = $sideLength;
+		function calculate($w, $h, $length) {
+			if($w >= $h) {
+				if($w >= $length) {
+					$h = floor($length * $h / $w );
+					$w = $length;
+				}
 			}
+			return array(
+				'width' => $w,
+				'height' => $h
+			);
 		}
 		
-		$image->scaleimage($width, $height);
+		$size = calculate($width, $height, $tiny);
+		$image->scaleimage($size['width'], $size['height']);
+		$image->writeimage($filePath.'.tiny.'.$extension);
+		
+		$size = calculate($width, $height, $small);
+		$image->scaleimage($size['width'], $size['height']);
 		$image->writeimage($filePath.'.small.'.$extension);
+		
+		$size = calculate($width, $height, $large);
+		$image->scaleimage($size['width'], $size['height']);
+		$image->writeimage($filePath.'.large.'.$extension);
+		
 		
 		$this->_data = array(
 			'identifier' => $identifier,
 			'photo_id' => $photoId,
 			'directory' => 'attachments',
 			'path' => $path,
-			'small' => str_replace($extension, 'small.'.$extension, $path)
+			'tiny' => str_replace($extension, 'tiny.'.$extension, $path),
+			'small' => str_replace($extension, 'small.'.$extension, $path),
+			'large' => str_replace($extension, 'large.'.$extension, $path)
 		);
 		return $this->success('上传成功');
 	}
